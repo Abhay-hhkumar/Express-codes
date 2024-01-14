@@ -1,0 +1,30 @@
+<%- include('./partials/header.ejs') %>
+<%- include('./partials/navbar.ejs') %>
+<div class="container">
+    <div class="row mt-5">
+        
+  
+    <h1>Registration Page</h1>
+    <hr>
+    <!-- note here default '  action="/registration"'  ' because to come at this registration page we used /registration route -->
+    <form method="post">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" name="name" required />
+         
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required />
+           <!-- note here req.body.email, email text should be same as written in the value of "name" in the form i.e name="email" -->
+          </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" name="password" required>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div></div>
+
+    <%- include('./partials/footer.ejs') %>
